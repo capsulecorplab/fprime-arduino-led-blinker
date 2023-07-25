@@ -45,6 +45,8 @@ module MathDeployment {
     instance textLogger
     instance uplink
     instance systemResources
+    instance mathSender
+    instance mathReceiver
 
     # ----------------------------------------------------------------------
     # Pattern graph specifiers
