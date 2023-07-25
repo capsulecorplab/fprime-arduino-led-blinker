@@ -82,12 +82,20 @@ module MathDeployment {
     stack size Default.STACK_SIZE \
     priority 96
 
+  instance mathSender: MathModule.MathSender base id 0xE00 \
+    queue size Default.QUEUE_SIZE \
+    stack size Default.STACK_SIZE \
+    priority 100
+
   # ----------------------------------------------------------------------
   # Queued component instances
   # ----------------------------------------------------------------------
 
   instance $health: Svc.Health base id 0x2000 \
     queue size 25
+
+  instance mathReceiver: MathModule.MathReceiver base id 0x2700 \
+    queue size Default.QUEUE_SIZE
 
   # ----------------------------------------------------------------------
   # Passive component instances
